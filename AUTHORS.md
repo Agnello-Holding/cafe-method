@@ -33,7 +33,7 @@ O método não nasceu do nada. Carrega no DNA o trabalho de:
 
 - **Comunidade Lendár[IA]** · tribo AIOX · onde o Café Lendário acontece desde 2026.
 - **Rodrigo Feldman** · host do Café Lendário · primeiro coordenador a validar o método em comunidade real (Trilha Mediada Campbell · 18-29 Mai 2026).
-- **Primeira cohort do Café (Maio 2026):** Luciano Za (meditação) · Lu (feedback de formato) · Marcela Lanna (gravações Salvadori) · Marcus Egito Barbosa · Helayne Damasio · Emily Susan · Luciana — cada presença ajustou a densidade e o tom.
+- **Primeira cohort do Café (Maio 2026):** Luciano Za (meditação) · Renato Lhamas · Marcus Egito Barbosa · Jaya · Helayne Damasio · Gauners · Glauco · Lu · (feedback de formato) · Marcela Lanna (pensamento Salvadori) · Emily Susan · Luciana — e a cada e toda presença ajustou a densidade e o tom.
 
 ---
 
