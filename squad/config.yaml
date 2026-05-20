@@ -1,0 +1,327 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Squad: cafe-method
+# Domain: Dense Book Extraction · Mediated Reading Trails
+# Created: 2026-05-20
+# Version: 1.0.0
+# Created by: Jhonas Agnello · Holding AGNELLO
+# Repository: https://github.com/Agnello-Holding/cafe-method
+# License: MIT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+squad:
+  name: cafe-method
+  display_name: "Cafe Method Squad"
+  version: "1.0.0"
+  domain: "Dense Book Extraction · Mediated Reading Trails"
+  description: |
+    Squad especialista em transformar qualquer livro denso em trilha de
+    leitura mediada para comunidade. Gera um post principal (panorama + estrutura
+    do clube) e N comentários sequenciais (capítulos densos fiéis à fonte com
+    camada arquetípica). Saída pronta pra publicar em Circle, Discord, Slack,
+    fórum, grupo de leitura ou newsletter.
+
+  philosophy: |
+    "Fidelidade à fonte · densidade real · sem prescrição."
+
+    Não somos resumidores. Somos cartógrafos da estrutura interna que o autor
+    de fato escreveu. Devolvemos pergunta, não receita. Citamos o autor com
+    fidelidade ou paráfraseamos com honestidade. Aplicamos camada arquetípica
+    sem virar misticismo. Avisamos CVV/SAMU quando o tema pesar.
+
+    Princípio Mother of Wands: mostramos o método inteiro · não pedimos
+    aprovação · quem quer usar, usa.
+
+  keywords:
+    - book-extraction
+    - reading-trail
+    - mediated-reading
+    - archetypal-layer
+    - community-reading
+    - circle
+    - discord
+    - book-club
+    - campbell
+    - jung
+    - source-fidelity
+    - aiox-squad
+
+  entry_agent: joseph-chief
+  created_by: "jhonas-agnello"
+  created_at: "2026-05-20"
+  repository: "https://github.com/Agnello-Holding/cafe-method"
+  license: "MIT"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# TIER ARCHITECTURE
+# ─────────────────────────────────────────────────────────────────────────────
+
+tiers:
+  tier_0:
+    name: "Orchestration & Routing"
+    agents:
+      - joseph-chief
+    purpose: "Triage requests, route to specialists, sequence the full pipeline, compose final bundle"
+
+  tier_1:
+    name: "Core Extraction"
+    agents:
+      - structure-mapper
+      - source-extractor
+    purpose: "Map book structure into N days · extract dense content faithful to source"
+
+  tier_2:
+    name: "Archetypal Layer & Quality"
+    agents:
+      - archetype-weaver
+      - quality-warden
+    purpose: "Weave archetypal layer (image · question · paradox) · validate against quality gates"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AGENT REGISTRY
+# ─────────────────────────────────────────────────────────────────────────────
+
+agents:
+  joseph-chief:
+    file: agents/joseph-chief.md
+    tier: 0
+    persona: "Joseph"
+    based_on: "Joseph Campbell + Carl Jung"
+    icon: "🧠"
+    focus: "Orchestration · triage · pipeline sequencing · final composition"
+    voice: "Reverent without sacralizing · academic without distance · guide that asks"
+
+  structure-mapper:
+    file: agents/structure-mapper.md
+    tier: 1
+    persona: "Cartographer"
+    based_on: "Vladimir Propp + Mircea Eliade"
+    icon: "🗺️"
+    focus: "Book structural analysis · density classification · day partition"
+    voice: "Methodical · precise · respects the architecture of the work"
+
+  source-extractor:
+    file: agents/source-extractor.md
+    tier: 1
+    persona: "Scholar"
+    based_on: "Erich Auerbach + Northrop Frye"
+    icon: "📚"
+    focus: "Dense content extraction · source-faithful citations · cross-referenced evidence"
+    voice: "Scholarly · faithful · honest about what the author actually says"
+
+  archetype-weaver:
+    file: agents/archetype-weaver.md
+    tier: 2
+    persona: "Weaver"
+    based_on: "Carl Jung + James Hillman"
+    icon: "🌀"
+    focus: "Archetypal images · open questions · paradoxes · psychological bridge"
+    voice: "Symbolic · non-prescriptive · returns the question to the reader"
+
+  quality-warden:
+    file: agents/quality-warden.md
+    tier: 2
+    persona: "Sentinel"
+    based_on: "Alan filter (Pareto · Existência · Trilogia · Anti-pattern)"
+    icon: "🛡️"
+    focus: "Quality gate · source fidelity · CVV/SAMU presence · anti-prescription · cultural sensitivity"
+    voice: "Firm · honest · vetoes what doesn't pass"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# HANDOFF MATRIX
+# ─────────────────────────────────────────────────────────────────────────────
+
+handoffs:
+  joseph-chief:
+    routes_to: [structure-mapper, source-extractor, archetype-weaver, quality-warden]
+    sequence: [structure-mapper, source-extractor, archetype-weaver, quality-warden, joseph-chief]
+    composes_final_bundle: true
+
+  structure-mapper:
+    handoff_to: source-extractor
+    output: book-structure-map.yaml
+    escalates_to: [joseph-chief]
+
+  source-extractor:
+    needs_input_from: [structure-mapper]
+    handoff_to: archetype-weaver
+    output: dense-day-content.md (× N days)
+    escalates_to: [joseph-chief]
+
+  archetype-weaver:
+    needs_input_from: [source-extractor]
+    handoff_to: quality-warden
+    output: dense-day-content-with-archetype.md (× N days)
+    escalates_to: [joseph-chief]
+
+  quality-warden:
+    needs_input_from: [archetype-weaver]
+    handoff_to: joseph-chief
+    output: quality-report.md + (PASS | VETO)
+    escalates_to: []
+    veto_authority: true
+    veto_reasons:
+      - "Citação atribuída sem fonte verificável"
+      - "Tom prescritivo · 'destrave/transforme'"
+      - "CVV/SAMU ausente em tema sensível"
+      - "Apropriação cultural sem nomear linhagem"
+      - "Léxico gendrado sem aviso conceitual"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COMMANDS (slash + asterisk)
+# ─────────────────────────────────────────────────────────────────────────────
+
+commands:
+  primary:
+    - command: "*cafe-extract"
+      args: "<livro> [densidade]"
+      workflow: workflows/full-extract.yaml
+      description: "Pipeline completo · POST + N comentários + cronograma"
+      example: "*cafe-extract 'Marco Aurélio · Meditações' mediada"
+
+    - command: "*cafe-map"
+      args: "<livro>"
+      task: tasks/map-book-structure.md
+      description: "Só mapeia estrutura do livro (sem extrair conteúdo)"
+      example: "*cafe-map 'Nietzsche · Assim Falou Zaratustra'"
+
+    - command: "*cafe-day"
+      args: "<N>"
+      task: tasks/extract-day-content.md
+      description: "Gera só o dia N (assume estrutura já mapeada)"
+      example: "*cafe-day 3"
+
+    - command: "*cafe-quality"
+      args: "<arquivo>"
+      task: tasks/quality-check.md
+      description: "Roda quality gate em output já existente"
+      example: "*cafe-quality outputs/dia-5.md"
+
+    - command: "*cafe-swipe"
+      args: "<slug>"
+      description: "Lista ou exibe swipes prontos · referência"
+      example: "*cafe-swipe campbell"
+
+    - command: "*cafe-help"
+      description: "Manual rápido de comandos"
+
+  shortcuts:
+    - "@joseph              → ativa joseph-chief"
+    - "@cartographer        → ativa structure-mapper"
+    - "@scholar             → ativa source-extractor"
+    - "@weaver              → ativa archetype-weaver"
+    - "@sentinel            → ativa quality-warden"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CROSS-CUTTING CONCERNS
+# ─────────────────────────────────────────────────────────────────────────────
+
+cross_cutting:
+  source_fidelity:
+    description: "Toda citação atribuída ao autor precisa ser verificável"
+    enforcement: "quality-warden veto"
+    if_uncertain: "Parafraseie indicando '[Autor] argumenta que...' ou '[Autor] sugere que...'"
+
+  density_trails:
+    file: data/density-trails.yaml
+    options:
+      - rapida: "1 semana · 5 dias · livros leves (Holiday · Sinek · Clear · Newport)"
+      - mediada: "2 semanas · 10 dias · livros densos com estrutura clara (Campbell · Marco Aurélio · Brené · Irvine)"
+      - hermetica: "4 semanas · 20 dias · livros herméticos (Nietzsche · Heidegger · Wittgenstein · Espinosa)"
+
+  safety_cvv:
+    description: "CVV (188) e SAMU (192) presentes quando tema toca saúde mental aguda"
+    triggers:
+      - "Suicídio · ideação suicida"
+      - "Depressão maior"
+      - "Burnout grave"
+      - "Crise espiritual"
+      - "Luto profundo"
+      - "Ventre da Baleia / nigredo / morte simbólica"
+    enforcement: "quality-warden veto se ausente"
+
+  anti_prescription:
+    description: "Sempre devolver pergunta · nunca receita"
+    forbidden_phrases:
+      - "destrave"
+      - "transforme sua leitura"
+      - "revolucione"
+      - "X passos para Y"
+      - "fórmula infalível"
+      - "garantido"
+    enforcement: "quality-warden veto"
+
+  archetypal_attribution:
+    description: "Nomear linhagem · não secularizar nem proselitizar"
+    rule: "Quando usar imagem de tradição X, nomear X · sem fingir universalidade rasa"
+    examples:
+      - "✅ 'Como ensina o Bardo Thödol (Livro Tibetano dos Mortos)...'"
+      - "❌ 'A sabedoria oriental diz...'"
+
+  quality_standards:
+    min_words_per_day: 1200
+    max_words_per_day: 1800
+    min_words_post_principal: 700
+    max_words_post_principal: 900
+    citations_required_per_day: 2  # mínimo de fontes cruzadas
+    smoke_tests: 5
+
+  aiox_awareness:
+    description: "Squad é AIOX-core compliant · respeita Constitution"
+    context_files:
+      - ".aiox-core/constitution.md"
+      - ".aiox-core/core-config.yaml"
+    follows_articles:
+      - "I - CLI First"
+      - "II - Agent Authority"
+      - "III - Story-Driven Development"
+      - "IV - No Invention"
+      - "V - Quality First"
+      - "VI - Absolute Imports"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CREDIT (Mother of Wands · 5 locations)
+# ─────────────────────────────────────────────────────────────────────────────
+
+attribution:
+  creator:
+    name: "Jhonas Agnello"
+    handle: "@jhonasagnello"
+    org: "Holding AGNELLO"
+    country: "Brasil"
+    quote: "Filosofia, neurociências e IA como caminhos para decifrar a realidade."
+
+  origin: "Café Lendár[IA] · Comunidade Lendária · AIOX · Maio/2026"
+  first_use_case: "O Herói de Mil Faces (Joseph Campbell) · Trilha Mediada · 18-29 Mai 2026"
+
+  output_footer: "— método cafe-method · github.com/Agnello-Holding/cafe-method"
+  enforcement: "All agents append output_footer to their final outputs (discreet · single line)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# SETTINGS
+# ─────────────────────────────────────────────────────────────────────────────
+
+settings:
+  greeting:
+    level: archetypal
+    show_squad_info: true
+    show_first_use_case: true
+
+  activation:
+    prefix: "cafe-method"
+    example: "@cafe-method:source-extractor"
+    shortcuts_enabled: true
+
+  output:
+    default_format: markdown
+    output_dir: "outputs/"
+    output_naming: "{book-slug}/{date}/"
+    include_credit_footer: true
+
+  language:
+    default: "pt-BR"
+    supported: ["pt-BR", "en"]
+    fallback: "pt-BR"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# END · cafe-method squad config
+# ═══════════════════════════════════════════════════════════════════════════════

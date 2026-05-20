@@ -1,0 +1,162 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Density Trails · cafe-method
+#
+# 3 trilhas canônicas de densidade · escolhidas conforme natureza do livro.
+# Cartographer (structure-mapper) consulta este arquivo ao decidir trilha.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+trails:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  rapida:
+    name: "Trilha Rápida"
+    duration_weeks: 1
+    working_days: 5
+    encounter_minutes: 30
+    rationale: |
+      Livros leves a moderados · estrutura linear · ensaios curtos.
+      Densidade conceitual única · sem 17 estágios pra navegar.
+
+    indicated_for:
+      - "Self-help denso moderno"
+      - "Estoicismo moderno (Holiday · Irvine resumido)"
+      - "Ensaios curtos"
+      - "Livros com 1 ideia central forte"
+      - "Livros de gestão/produtividade com camada filosófica"
+
+    example_books:
+      - "Ryan Holiday · *O Obstáculo é o Caminho*"
+      - "Simon Sinek · *Comece pelo Porquê*"
+      - "James Clear · *Hábitos Atômicos*"
+      - "Cal Newport · *Trabalho Focado*"
+      - "Robert Greene · *As 48 Leis do Poder* (seções)"
+      - "Yuval Harari · *Sapiens* (capítulos selecionados)"
+      - "Mark Manson · *A Sutil Arte de Ligar o Foda-se*"
+
+    structure_default:
+      day_1: "Panorama + frase-âncora + apresentação do autor"
+      day_2: "1ª parte / 1º bloco conceitual"
+      day_3: "2ª parte / aprofundamento"
+      day_4: "3ª parte / aplicação"
+      day_5: "Síntese + pergunta-âncora da semana"
+
+    words_per_day_target: "1.000-1.400"
+    archetypal_density: low_to_medium
+
+  # ───────────────────────────────────────────────────────────────────────────
+  mediada:
+    name: "Trilha Mediada"
+    duration_weeks: 2
+    working_days: 10
+    encounter_minutes: 35-40
+    rationale: |
+      Livros densos com estrutura clara · permite navegação detalhada.
+      Ponto ótimo entre profundidade e cadência sustentável.
+
+    indicated_for:
+      - "Mitologia comparada (Campbell · Frazer)"
+      - "Estoicismo clássico (Marco Aurélio · Epicteto · Sêneca)"
+      - "Psicologia profunda (Brené Brown · Hendricks · Jung introdutório)"
+      - "Filosofia prática (Irvine · Pigliucci · Robertson)"
+      - "Espiritualidade contemplativa (Merton · Tolle denso)"
+      - "Livros com estrutura clara (17 estágios · 12 livros · 7 leis)"
+
+    example_books:
+      - "Joseph Campbell · *O Herói de Mil Faces*"
+      - "Marco Aurélio · *Meditações*"
+      - "Brené Brown · *A Coragem de Ser Imperfeito*"
+      - "William Irvine · *Guia da Boa Vida*"
+      - "Gay Hendricks · *O Grande Salto*"
+      - "Thomas Merton · *A Montanha dos Sete Patamares* (seções)"
+      - "Erich Fromm · *A Arte de Amar*"
+      - "Viktor Frankl · *Em Busca de Sentido*"
+      - "Carol Pearson · *O Despertar do Herói Interior*"
+      - "Robert Bly · *João de Ferro*"
+
+    structure_default:
+      week_1: "Bloco macro 1 (5 dias · estágios/capítulos iniciais)"
+      week_2: "Bloco macro 2 (5 dias · estágios/capítulos finais + síntese)"
+
+    words_per_day_target: "1.300-1.800"
+    archetypal_density: medium_to_high
+
+  # ───────────────────────────────────────────────────────────────────────────
+  hermetica:
+    name: "Trilha Hermética"
+    duration_weeks: 4
+    working_days: 20
+    encounter_minutes: 40-50
+    rationale: |
+      Livros herméticos · aforismáticos · conceitualmente densos.
+      Exigem prazo longo pra cada conceito amadurecer.
+      Mentor Hermético acompanha (vs Joseph companion).
+
+    indicated_for:
+      - "Filosofia continental hermética (Nietzsche · Heidegger · Wittgenstein)"
+      - "Ontologia / metafísica (Espinosa · Bergson)"
+      - "Krishnamurti · Osho denso · Adyashanti"
+      - "Aforismo (Nietzsche · Cioran · Pessoa)"
+      - "Mística (Mestre Eckhart · Teresa d'Ávila · São João da Cruz)"
+      - "Ciência hermética (Steiner · Gurdjieff · Schwaller de Lubicz)"
+      - "Poesia filosófica densa (Hölderlin · Rilke · Drummond)"
+
+    example_books:
+      - "Friedrich Nietzsche · *Assim Falou Zaratustra*"
+      - "Martin Heidegger · *Ser e Tempo* (Parte I)"
+      - "Ludwig Wittgenstein · *Tractatus Logico-Philosophicus*"
+      - "Baruch Espinosa · *Ética* (Parte I-III)"
+      - "Henri Bergson · *A Evolução Criadora*"
+      - "Krishnamurti · *A Liberdade Primeira e Última*"
+      - "Mestre Eckhart · *Sermões Alemães* (seleção)"
+      - "Albert Camus · *O Homem Revoltado*"
+      - "Emil Cioran · *Silogismos da Amargura*"
+      - "Rudolf Steiner · *Filosofia da Liberdade*"
+
+    structure_default:
+      week_1: "Aproximação · contexto · vocabulário · 1ª camada"
+      week_2: "Mergulho · aforismos centrais · 2ª camada"
+      week_3: "Cruzamentos · paradoxos · 3ª camada"
+      week_4: "Síntese · ressonância · aplicação contemplativa"
+
+    words_per_day_target: "1.500-2.000"
+    archetypal_density: high
+
+    special_notes:
+      - "Trilha Hermética NÃO usa Joseph como agente principal · usa Mentor Hermético (variação · ver agent-mentor-hermetico.md futuro)"
+      - "Comentários podem incluir um aforismo central do dia em destaque visual"
+      - "Pergunta diária frequentemente apresenta forma de koan"
+
+# ───────────────────────────────────────────────────────────────────────────
+# REGRA DE SELEÇÃO (Cartographer)
+# ───────────────────────────────────────────────────────────────────────────
+
+selection_rules:
+
+  - if: "Livro tem < 200 páginas + 1 ideia central + estilo direto"
+    then: rapida
+
+  - if: "Livro tem 200-400 páginas + estrutura clara em fases/estágios/capítulos numerados"
+    then: mediada
+
+  - if: "Livro é hermético/aforismático/poético + exige releitura lenta"
+    then: hermetica
+
+  - if: "Livro tem > 600 páginas"
+    then: "considerar dividir em volumes · trilha por volume"
+
+  - if: "User especifica trilha · respeitar"
+    then: "user_choice"
+
+# ───────────────────────────────────────────────────────────────────────────
+# AVISOS
+# ───────────────────────────────────────────────────────────────────────────
+
+warnings:
+  - "Não force trilha rápida em livro hermético · achata"
+  - "Não force trilha hermética em livro simples · estica artificialmente"
+  - "Densidade não é status · é leitura do livro"
+  - "Confirme com user antes de prosseguir se trilha sugerida diverge da pedida"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# END · density-trails
+# ═══════════════════════════════════════════════════════════════════════════════

@@ -1,0 +1,117 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Workflow: single-day
+# Squad: cafe-method
+# Trigger: *cafe-day <N>
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  name: single-day
+  display_name: "Single Day Extraction"
+  version: "1.0.0"
+  description: |
+    Gera 1 dia específico (assume estrutura já mapeada anteriormente).
+    Útil pra refazer um dia · gerar incrementalmente · ou economizar tokens.
+
+  trigger:
+    command: "*cafe-day"
+    args:
+      - name: day_number
+        required: true
+        type: int
+        description: "Número do dia a gerar (1 a N · conforme map)"
+      - name: book_slug
+        required: false
+        description: "Slug do livro (default: livro ativo no contexto)"
+
+  estimated_total_time: "15-20 min"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# PRE-CONDITIONS
+# ─────────────────────────────────────────────────────────────────────────────
+
+pre_conditions:
+  - book_structure_map_exists: outputs/{book-slug}/book-structure-map.yaml
+  - if missing: prompt user to run *cafe-map first
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STEPS
+# ─────────────────────────────────────────────────────────────────────────────
+
+steps:
+
+  - step: 1
+    name: "Carregar contexto"
+    agent: joseph-chief
+    actions:
+      - load outputs/{book-slug}/book-structure-map.yaml
+      - identify day {N} metadata
+      - validate day exists in map
+    on_failure:
+      - if day > N total: error to user
+      - if map missing: redirect to *cafe-map
+
+  - step: 2
+    name: "Extrair conteúdo do dia"
+    agent: source-extractor
+    task: tasks/extract-day-content.md
+    inputs:
+      - day metadata from map
+    outputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md
+    estimated_time: "10-15 min"
+
+  - step: 3
+    name: "Tecer camada arquetípica"
+    agent: archetype-weaver
+    task: tasks/weave-archetypal-layer.md
+    inputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md
+    outputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md (atualizado)
+    estimated_time: "3-5 min"
+
+  - step: 4
+    name: "Quality gate"
+    agent: quality-warden
+    task: tasks/quality-check.md
+    inputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md
+    outputs:
+      - PASS or VETO + report
+    on_veto:
+      - route back · max_retries 2
+      - escalate to joseph-chief after
+
+  - step: 5
+    name: "Entrega ao user"
+    agent: joseph-chief
+    action: present day {N} + metrics + suggestion of next step
+    deliverable: chat message
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUT
+# ─────────────────────────────────────────────────────────────────────────────
+
+output:
+  - outputs/{book-slug}/dias/dia-{NN}.md
+  - quality_report inline
+
+# ─────────────────────────────────────────────────────────────────────────────
+# USE CASES
+# ─────────────────────────────────────────────────────────────────────────────
+
+use_cases:
+  - "User não quer rodar pipeline completo · só testa um dia"
+  - "User refaz dia específico (depois de feedback)"
+  - "LLM com limite de contexto · gerar dia por dia"
+  - "Cronograma faseado · publicar dia a dia conforme avança"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CREDIT
+# ─────────────────────────────────────────────────────────────────────────────
+
+credit:
+  workflow_by: "Jhonas Agnello · Holding AGNELLO"
+  squad: cafe-method v1.0
+  repository: https://github.com/Agnello-Holding/cafe-method
+  license: MIT

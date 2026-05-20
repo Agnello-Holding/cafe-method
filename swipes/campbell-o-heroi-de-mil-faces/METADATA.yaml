@@ -1,0 +1,127 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Swipe Metadata · Campbell · O Herói de Mil Faces
+# ═══════════════════════════════════════════════════════════════════════════════
+
+swipe:
+  slug: "campbell-o-heroi-de-mil-faces"
+  generated_at: "2026-05-19"
+  status: "production-tested"  # validado em comunidade real
+
+book:
+  title: "O Herói de Mil Faces"
+  title_original: "The Hero with a Thousand Faces"
+  author: "Joseph Campbell"
+  original_publication: 1949
+  edition_referenced: "Cultrix · tradução Adail Ubirajara Sobral"
+  pages_total: 392
+  language_of_source: "EN"
+  language_of_extraction: "pt-BR"
+
+trail:
+  density: "mediada"
+  total_days: 10
+  total_weeks: 2
+  rationale: |
+    17 estágios em estrutura clara. 1 semana achata. 4 semanas dispersa.
+    2 semanas permite 1 bloco macro por semana (Partida · Iniciação+Retorno)
+    com espaço de digestão entre fases.
+
+context:
+  origin: "Café Lendár[IA] · Comunidade Lendária · AIOX"
+  generated_by: "cafe-method v1.0"
+  generated_for: "Circle Comunidade Lendária"
+  coordinator: "Rodrigo Feldman"
+  start_date: "2026-05-18"
+  end_date: "2026-05-29"
+
+content:
+  files:
+    post_principal:
+      file: POST-PRINCIPAL.md
+      words: ~780
+    comentarios:
+      file: COMENTARIOS-10-DIAS.md
+      words: ~14500
+      days: 10
+    dm_coordenador:
+      file: DM-COORDENADOR.md
+      words: ~600
+
+quality_metrics:
+  citations_literal: 14  # citações entre aspas com fonte verificável
+  citations_paraphrased: 47  # paráfrases honestas
+  cvv_samu_triggers: 2  # Dia 4 (Ventre da Baleia) · Dia 9 (Recusa do Retorno)
+  cultural_traditions_referenced:
+    - "mitologia greco-romana"
+    - "cristianismo (Antigo e Novo Testamento)"
+    - "budismo (Mahayana · Bardo Thödol)"
+    - "hinduísmo (Bhagavad-Gita · Krishna · Kali)"
+    - "alquimia hermética"
+    - "xamanismo siberiano"
+    - "iniciações tribais (aborígene · maasai · kabir)"
+    - "tradição judaica (36 justos · Lamed Vavniks)"
+    - "tradição muçulmana (sufismo · referência indireta)"
+    - "taoísmo (wu wei · referência no estágio final)"
+    - "egípcio antigo (Ísis · Osíris)"
+    - "sumério (Inanna · Ereshkigal)"
+    - "andino (Pachamama)"
+
+attention_flags:
+  - "Léxico gendrado (Campbell 1949): 'Deusa' e 'Mulher como Tentação' usados com aviso conceitual no Dia 7"
+  - "CVV/SAMU obrigatório no Dia 4 (Ventre da Baleia · correlato depressão maior)"
+  - "CVV/SAMU presente no Dia 9 (Recusa do Retorno · correlato reclusão pós-trauma)"
+  - "Star Wars/Matrix mencionados brevemente como pontes contemporâneas · não como exemplo central"
+
+psychological_bridges_used:
+  - "Jung (anima · animus · self · individuação · sombra · nigredo · coniunctio)"
+  - "Freud (recalque · Édipo · referência indireta)"
+  - "Schopenhauer (vontade como força impessoal · citação implícita do Campbell)"
+  - "Hillman (sintoma como linguagem da alma · referência implícita)"
+
+primary_evidence:
+  - "Conto folclórico da princesa-rã (Grimm) · estágio 1"
+  - "Jonas (Antigo Testamento) · estágio 5"
+  - "Pinóquio (conto moderno) · estágio 5"
+  - "Trabalhos de Hércules · estágio 6"
+  - "Trabalhos de Psique (Apuleio · Asno de Ouro) · estágios 6-7"
+  - "Bardo Thödol (Livro Tibetano dos Mortos) · estágios 5-6"
+  - "Eros e Psique · estágio 7"
+  - "Sereias · Calipso · Circe (Odisseia) · estágio 8"
+  - "Buda confrontado por Mara · estágio 8"
+  - "Cristo no Getsêmani · estágio 9"
+  - "Édipo · estágio 9"
+  - "Bhagavad-Gita (Krishna a Arjuna) · estágios 9-10"
+  - "Bodhisattvas (budismo Mahayana) · estágios 12-16"
+  - "Conto folclórico russo Ivan e a Bruxa · estágio 13"
+  - "Theseu e Ariadne · estágio 14"
+  - "Lamed Vavniks (tradição judaica) · estágio 16"
+
+audience_validated_with:
+  - "Operadores AIOX (Comunidade Lendária)"
+  - "Leitores adultos com repertório filosófico básico"
+  - "Tribo de leitura mediada presencial + assíncrona"
+
+usage_notes:
+  - "Pode ser usado como swipe-base pra qualquer outro livro de Campbell"
+  - "Estrutura replicável (com adaptações) pra outros autores em Trilha Mediada"
+  - "Comentários funcionam como leitura autônoma · não exigem o livro físico"
+  - "Comentários funcionam melhor com o livro em mãos · uso companion ideal"
+
+next_planned_swipes:
+  - "Marco Aurélio · Meditações (trilha mediada)"
+  - "Nietzsche · Assim Falou Zaratustra (trilha hermética)"
+  - "Brené Brown · A Coragem de Ser Imperfeito (trilha mediada)"
+  - "Ryan Holiday · O Obstáculo é o Caminho (trilha rápida)"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# CREDIT
+# ═══════════════════════════════════════════════════════════════════════════════
+
+generated_by:
+  squad: "cafe-method v1.0"
+  creator: "Jhonas Agnello · Holding AGNELLO"
+  repository: "https://github.com/Agnello-Holding/cafe-method"
+  license: "MIT"
+  generated_at: "2026-05-19"
+
+# ═══════════════════════════════════════════════════════════════════════════════

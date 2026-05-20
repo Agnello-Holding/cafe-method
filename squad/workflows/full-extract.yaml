@@ -1,0 +1,200 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Workflow: full-extract
+# Squad: cafe-method
+# Trigger: *cafe-extract <livro> [densidade]
+# ═══════════════════════════════════════════════════════════════════════════════
+
+workflow:
+  name: full-extract
+  display_name: "Full Book Extraction Pipeline"
+  version: "1.0.0"
+  description: |
+    Pipeline completo de extração: do livro bruto ao bundle de publicação.
+    Sequencia os 5 agentes do squad em ordem fixa com handoffs validados.
+
+  trigger:
+    command: "*cafe-extract"
+    args:
+      - name: book
+        required: true
+        description: "Identificação do livro (autor · título)"
+      - name: density
+        required: false
+        default: "auto"
+        options: ["rapida", "mediada", "hermetica", "auto"]
+        description: "Trilha de densidade · auto = Cartographer sugere"
+
+  estimated_total_time: "30-60 min (dependendo do N de dias)"
+
+# ─────────────────────────────────────────────────────────────────────────────
+# STEPS
+# ─────────────────────────────────────────────────────────────────────────────
+
+steps:
+
+  - step: 1
+    name: "Triage e validação"
+    agent: joseph-chief
+    inputs:
+      - command_args
+    actions:
+      - validate book identification
+      - confirm edition if uncertain
+      - validate density choice or delegate to Cartographer
+      - validate audience and coordinator (optional)
+    outputs:
+      - validated_input.yaml
+    on_failure:
+      - ask user for clarification
+      - block until input complete
+
+  - step: 2
+    name: "Mapear estrutura do livro"
+    agent: structure-mapper
+    task: tasks/map-book-structure.md
+    inputs:
+      - validated_input.yaml
+    outputs:
+      - outputs/{book-slug}/book-structure-map.yaml
+    estimated_time: "5-10 min"
+    on_failure:
+      - escalate to joseph-chief
+      - if book uncertain, ask user for fonte
+
+  - step: 3
+    name: "Extrair conteúdo denso por dia"
+    agent: source-extractor
+    task: tasks/extract-day-content.md
+    inputs:
+      - outputs/{book-slug}/book-structure-map.yaml
+    loop:
+      type: per_day
+      from: 1
+      to: N  # número total de dias da trilha
+    outputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md (× N days)
+    estimated_time: "10-15 min × N dias"
+    markers_left:
+      - "[ARCHETYPAL_LAYER_PLACEHOLDER]"
+      - "[CVV_TRIGGER]" (when applicable)
+
+  - step: 4
+    name: "Tecer camada arquetípica por dia"
+    agent: archetype-weaver
+    task: tasks/weave-archetypal-layer.md
+    inputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md (per day)
+    loop:
+      type: per_day
+      from: 1
+      to: N
+    outputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md (atualizado · marcadores resolvidos)
+    estimated_time: "3-5 min × N dias"
+
+  - step: 5
+    name: "Quality gate por dia"
+    agent: quality-warden
+    task: tasks/quality-check.md
+    inputs:
+      - outputs/{book-slug}/dias/dia-{NN}.md (per day)
+    loop:
+      type: per_day
+      from: 1
+      to: N
+    outputs:
+      - PASS or VETO + report
+    on_veto:
+      - route back to appropriate agent (Scholar or Weaver)
+      - re-run that day from the failed step
+      - max_retries: 2 (then escalate to joseph-chief)
+
+  - step: 6
+    name: "Compor bundle de publicação"
+    agent: joseph-chief
+    task: tasks/compose-publication-bundle.md
+    inputs:
+      - outputs/{book-slug}/dias/dia-{01..NN}.md (todos com PASS)
+      - outputs/{book-slug}/book-structure-map.yaml
+    outputs:
+      - outputs/{book-slug}/{date}/POST-PRINCIPAL.md
+      - outputs/{book-slug}/{date}/COMENTARIOS-{N}-DIAS.md
+      - outputs/{book-slug}/{date}/CRONOGRAMA.md
+      - outputs/{book-slug}/{date}/DM-COORDENADOR.md
+    estimated_time: "5-8 min"
+
+  - step: 7
+    name: "Entrega final ao user"
+    agent: joseph-chief
+    action: present bundle + metrics + next steps
+    deliverable: chat message with bundle paths + summary
+
+# ─────────────────────────────────────────────────────────────────────────────
+# QUALITY GATES
+# ─────────────────────────────────────────────────────────────────────────────
+
+quality_gates:
+  - gate: source-fidelity
+    enforced_by: quality-warden
+    blocks_step: 5
+    checklist: checklists/source-fidelity.md
+
+  - gate: anti-prescription
+    enforced_by: quality-warden
+    blocks_step: 5
+    checklist: checklists/quality-gate.md (section 2)
+
+  - gate: safety-cvv
+    enforced_by: quality-warden
+    blocks_step: 5
+    checklist: checklists/safety-cvv.md
+
+  - gate: cultural-attribution
+    enforced_by: quality-warden
+    blocks_step: 5
+    checklist: checklists/quality-gate.md (section 4)
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OUTPUTS DIRECTORY STRUCTURE
+# ─────────────────────────────────────────────────────────────────────────────
+
+outputs_structure: |
+  outputs/{book-slug}/
+  ├── book-structure-map.yaml         # do Cartographer
+  ├── dias/
+  │   ├── dia-01.md                   # Scholar → Weaver → Sentinel
+  │   ├── dia-02.md
+  │   └── ...
+  └── {date}/
+      ├── POST-PRINCIPAL.md           # do Joseph (compose)
+      ├── COMENTARIOS-{N}-DIAS.md
+      ├── CRONOGRAMA.md
+      └── DM-COORDENADOR.md
+
+# ─────────────────────────────────────────────────────────────────────────────
+# ERROR HANDLING
+# ─────────────────────────────────────────────────────────────────────────────
+
+error_handling:
+  on_veto_loop:
+    - max_retries_per_day: 2
+    - after_max_retries: escalate to joseph-chief + ask user
+  on_book_uncertain:
+    - ask user for source/edition
+    - block until confirmed
+  on_long_book:
+    - if pages > 500: warn user about time/tokens
+    - if user confirms: proceed
+  on_llm_context_limit:
+    - generate per day instead of batch
+    - user can run *cafe-day <N> individually
+
+# ─────────────────────────────────────────────────────────────────────────────
+# CREDIT
+# ─────────────────────────────────────────────────────────────────────────────
+
+credit:
+  workflow_by: "Jhonas Agnello · Holding AGNELLO"
+  squad: cafe-method v1.0
+  repository: https://github.com/Agnello-Holding/cafe-method
+  license: MIT

@@ -1,0 +1,163 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Archetypes Library · cafe-method
+#
+# Biblioteca de imagens-arquétipo reutilizáveis · consultada pelo Weaver.
+# NÃO é prescritiva — é inspiração. Weaver pode criar imagens novas se for melhor.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ───────────────────────────────────────────────────────────────────────────
+# IMAGENS POR ESTÁGIO ARQUETÍPICO (Campbell · 17 estágios)
+# ───────────────────────────────────────────────────────────────────────────
+
+monomito_campbell:
+
+  partida:
+    chamado_da_aventura:
+      - "a rã que bate à porta · pequena · esquecida · cobrando a promessa"
+      - "a carta que chega quando o herói nem lembrava ter mandado"
+      - "o sussurro que não passa · 3h da manhã · sem motivo"
+      - "a porta que se entreabre sozinha quando o herói não está olhando"
+
+    recusa_do_chamado:
+      - "Jonas correndo pra Társis · de costas pro chamado"
+      - "a terra do rei Pescador · seca onde antes havia rio"
+      - "o sintoma que ninguém entende · porque ninguém percebeu o chamado"
+
+    auxilio_sobrenatural:
+      - "Atena disfarçada de Mentor · invisível pra quem não decidiu"
+      - "o velho com lanterna no cruzamento · que aparece quando o herói pergunta"
+      - "Mercúrio dos alquimistas · ambíguo · necessário"
+
+    travessia_primeiro_limiar:
+      - "a ponte estreita sobre o abismo · águia paira do outro lado"
+      - "o portal com Cérbero · três cabeças · uma pergunta"
+      - "o navio que parte · não há retorno · só o agora"
+
+    ventre_da_baleia:
+      - "a caverna úmida · útero do mundo · escuridão fecunda"
+      - "Jonas dentro do peixe · três dias · sem hora"
+      - "a noite no jardim · sem saber a hora"
+      - "nigredo · o início escuro da Grande Obra"
+
+  iniciacao:
+    estrada_das_provas:
+      - "o caminho com obstáculos que se renovam · cada um diferente · cada um exigindo uma virtude diferente"
+      - "os 12 trabalhos de Hércules · cada um arranca uma máscara"
+      - "Psique separando grãos · 1 noite · 1 montanha"
+
+    encontro_com_deusa:
+      - "Kali dançando sobre Shiva · colar de crânios · sorriso terno"
+      - "Inanna nua diante de Ereshkigal · todos os adornos perdidos"
+      - "Maria · mater dolorosa · rainha do céu · uma face só"
+      - "duas mãos estendidas — uma carrega um cálice, outra carrega um espelho · ambas brilham · só uma é a verdadeira"
+
+    mulher_como_tentacao:
+      - "as sereias · canto irresistível · mar que afoga"
+      - "Calipso oferecendo imortalidade · Ulisses pensando"
+      - "as filhas de Mara dançando diante de Buda · Tanha, Arati, Raga"
+
+    sintonia_com_pai:
+      - "Cristo no Getsêmani · 'afasta de mim este cálice'"
+      - "Édipo na encruzilhada · não sabia · descobriu · cegou-se"
+      - "Krishna revelando-se em forma cósmica a Arjuna · todos os mundos numa boca"
+
+    apoteose:
+      - "a coroa interior · que não é dourada · é silenciosa"
+      - "Buda sob a árvore Bodhi · sexto dia · estrela da manhã"
+      - "Cristo na cruz · 'tudo está consumado'"
+
+    bencao_final:
+      - "o elixir da vida · o velocino · as maçãs douradas · o Graal"
+      - "o ensinamento que se dá · não se guarda"
+      - "as tábuas que descem do monte · ainda quentes"
+
+  retorno:
+    recusa_do_retorno:
+      - "Buda hesitando 49 dias · Brahma pedindo três vezes"
+      - "Cristo no Monte Tabor · Pedro propondo três tendas"
+      - "o eremita que não quer voltar · porque sabe demais"
+
+    fuga_magica:
+      - "Jasão e Medeia · pente que vira floresta · espelho que vira lago"
+      - "Ivan e a Bruxa · objetos lançados se tornam obstáculos"
+      - "o herói carregando uma chama acesa pelo vento · andando rio acima"
+
+    resgate_auxilio_externo:
+      - "Ariadne segurando o fio · do lado de fora do labirinto"
+      - "Sujata oferecendo arroz com leite · sem dimensão mitológica · só compaixão"
+      - "o irmão que ficou · esperou · reconhece"
+
+    travessia_limiar_de_volta:
+      - "o herói atravessando a ponte · agora dois dentro de um corpo"
+      - "o regresso a Ítaca · mas Ítaca é diferente · ou ele é"
+
+    mestre_dos_dois_mundos:
+      - "o herói tomando café da manhã · sorri para o filho · e em silêncio carrega todos os mundos"
+      - "Buda andando entre aldeias · indistinguível"
+      - "bodhisattva descendo do céu Tushita · de volta ao samsara · em forma humana"
+      - "os 36 justos da tradição judaica · anônimos · sustentando o mundo"
+
+    liberdade_para_viver:
+      - "Buda no leito de morte · comendo carne contaminada · sem drama"
+      - "Krishna como vaqueiro · brincando com gopis · Absoluto em pele humana"
+      - "o sábio confuciano · ritual cotidiano como caminho do céu"
+
+# ───────────────────────────────────────────────────────────────────────────
+# IMAGENS POR TEMA (sem estágio específico)
+# ───────────────────────────────────────────────────────────────────────────
+
+por_tema:
+
+  inicio:
+    - "a porta que se entreabre sozinha"
+    - "o mapa antes do território"
+    - "a primeira pegada na areia molhada"
+
+  transicao:
+    - "a ponte estreita sobre o abismo"
+    - "a soleira onde o quarto vira corredor"
+    - "o útero · entre quem era e quem ainda não é"
+
+  prova:
+    - "o caminho que renova obstáculos"
+    - "a forja que não pergunta se o metal está pronto"
+    - "o exame que dura anos · sem nota final"
+
+  encontro:
+    - "duas mãos estendidas no escuro"
+    - "o espelho que devolve a face que não se reconhece"
+    - "a casa do outro · familiar pela primeira vez"
+
+  morte_simbolica:
+    - "a caverna · escuridão fecunda"
+    - "a noite no jardim das oliveiras"
+    - "o quarto sem janela · onde algo desaba pra algo nascer"
+
+  reconhecimento:
+    - "a coroa interior silenciosa"
+    - "o instante na cozinha · entendendo sem palavras"
+    - "o rosto no espelho · diferente do que era ontem"
+
+  retorno:
+    - "a chama acesa carregada pelo vento"
+    - "o herói tomando café da manhã · ainda carregando mundos"
+    - "a porta de casa · que agora parece menor"
+
+# ───────────────────────────────────────────────────────────────────────────
+# COMO USAR
+# ───────────────────────────────────────────────────────────────────────────
+
+usage_notes: |
+  Weaver consulta esta biblioteca ao tecer a imagem-arquétipo do dia.
+
+  Regras:
+  1. Pode usar diretamente uma imagem listada (atribua o estágio · não vira plágio)
+  2. Pode adaptar (substituir elemento por outro mais ressonante com o dia)
+  3. Pode criar nova imagem se nenhuma servir
+  4. Evite usar a mesma imagem em 2 dias diferentes da mesma trilha
+  5. Imagem precisa ser CONCRETA (substantivo + qualidade + gesto) · não abstrata
+  6. Sem clichê (luz no fim do túnel · arco-íris · pôr-do-sol)
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# END · archetypes-library
+# ═══════════════════════════════════════════════════════════════════════════════

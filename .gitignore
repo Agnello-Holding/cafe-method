@@ -1,0 +1,32 @@
+# Outputs gerados pelo método
+outputs/
+*.local.md
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (caso futuro CLI)
+node_modules/
+*.log
+.env
+.env.local
+
+# Python (caso futuro scripts)
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Drive sync artifacts
+.tmp.driveupload/
+.tmp.drivedownload/

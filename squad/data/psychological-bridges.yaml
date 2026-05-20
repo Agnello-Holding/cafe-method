@@ -1,0 +1,189 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Psychological Bridges · cafe-method
+#
+# Pontes entre estágios míticos e camadas psicológicas (Jung · Freud · Adler · etc.)
+# Scholar consulta ao adicionar "camada psicológica" · Weaver consulta ao tecer.
+#
+# REGRA CRÍTICA: só citar autor psicológico quando o autor do livro EFETIVAMENTE
+# o cita ou parafraseia. Não impor camada que não está.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+bridges:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  jung:
+    name: "Carl Gustav Jung (1875-1961)"
+    school: "Psicologia Analítica"
+
+    conceitos_canônicos:
+      arquétipo: "Imagem psíquica universal · emerge espontaneamente em sonhos · mitos · sintomas"
+      inconsciente_coletivo: "Camada psíquica compartilhada por toda humanidade · abaixo do inconsciente pessoal"
+      sombra: "Aspecto rejeitado pelo ego · contém qualidades não-integradas (boas ou más)"
+      anima_animus: "Contraparte de gênero interior · anima (no homem) · animus (na mulher)"
+      self: "Centro totalizante da psique · distinto do ego · meta da individuação"
+      individuação: "Processo de tornar-se a totalidade psíquica que se é"
+      coniunctio: "Casamento alquímico do consciente com o inconsciente"
+      nigredo: "Fase escura da alquimia · confronto com a sombra · noite escura"
+      albedo: "Clareamento · purificação · após a nigredo"
+      rubedo: "Vermelhão final · pedra filosofal · individuação consumada"
+      sincronicidade: "Coincidência significativa sem causalidade material"
+      tipos_psicológicos: "Introvertido/Extrovertido · Pensamento/Sentimento · Sensação/Intuição"
+
+    pontes_para_monomito:
+      chamado_da_aventura: "Self pressionando o ego · individuação chamando"
+      recusa_do_chamado: "Resistência do ego · 'o que não vem à consciência como destino, retorna como sintoma'"
+      auxilio_sobrenatural: "Arquétipo do Velho Sábio (Wise Old Man) · projeção do Self"
+      travessia_primeiro_limiar: "Decisão do ego de aceitar transformação · necessária mas insuficiente"
+      ventre_da_baleia: "Nigredo · confronto com a sombra · dissolução da persona"
+      estrada_das_provas: "Individuação acontecendo em camadas · cada prova arranca uma máscara"
+      encontro_com_deusa: "Coniunctio com a anima · integração do feminino interior"
+      mulher_como_tentação: "Anima negativa · sedução pra regressão"
+      sintonia_com_pai: "Integração do arquétipo do Pai · transferência da autoridade pro Self"
+      apoteose: "Reconhecimento do Self · ego servindo ao Self sem ser dissolvido"
+      bencao_final: "Frutos da individuação · disponíveis pra entregar"
+      recusa_do_retorno: "Inflação do ego · confusão entre estado místico e Self"
+      mestre_dos_dois_mundos: "Individuação madura · ego saudável a serviço do Self"
+      liberdade_para_viver: "Self integrado · vida vivida com profundidade da totalidade"
+
+    quando_citar:
+      - "Autor do livro cita Jung explicitamente"
+      - "Autor usa léxico junguiano (arquétipo · individuação · sombra)"
+      - "Camada psicológica do estágio mítico tem correlato junguiano direto"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  freud:
+    name: "Sigmund Freud (1856-1939)"
+    school: "Psicanálise"
+
+    conceitos_canônicos:
+      inconsciente: "Camada psíquica não-acessível à consciência · contém recalcado"
+      recalque: "Mecanismo de defesa · expulsa material doloroso da consciência"
+      complexo_de_édipo: "Triangulação afetiva criança-pai-mãe · estrutura formadora"
+      castração: "Reconhecimento simbólico da limitação · entrada na lei"
+      pulsão: "Força psíquica que busca satisfação · Eros e Thanatos"
+      sublimação: "Redirecionamento de pulsão sexual pra atividades culturais"
+      mecanismos_de_defesa: "Negação · projeção · racionalização · etc."
+
+    pontes_para_monomito:
+      recusa_do_chamado: "Recalque · pulsão de fuga"
+      sintonia_com_pai: "Resolução do complexo edipiano · entrada na lei simbólica"
+      ventre_da_baleia: "Retorno ao recalcado · confronto com material reprimido"
+      mulher_como_tentação: "Pulsão regressiva · sedução do princípio do prazer"
+
+    quando_citar:
+      - "Autor do livro cita Freud (Campbell cita várias vezes)"
+      - "Estágio toca dinâmica familiar/edipiana"
+      - "Tema é recalque/retorno do recalcado"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  adler:
+    name: "Alfred Adler (1870-1937)"
+    school: "Psicologia Individual"
+
+    conceitos_canônicos:
+      vontade_de_poder: "Força fundamental do desenvolvimento humano (Adler usa diferente de Nietzsche)"
+      complexo_de_inferioridade: "Sentimento de insuficiência · motor de superação"
+      compensação: "Mecanismo de equilíbrio · vontade de superação"
+      sentimento_de_comunidade: "Gemeinschaftsgefühl · senso de pertencimento social"
+      estilo_de_vida: "Padrão único de comportamento desenvolvido na infância"
+
+    pontes_para_monomito:
+      chamado_da_aventura: "Vontade de superação · compensação por inferioridade percebida"
+      estrada_das_provas: "Forja do estilo de vida · superação compensatória"
+      bencao_final: "Sentimento de comunidade · entrega ao coletivo"
+
+    quando_citar:
+      - "Autor cita Adler (Campbell cita)"
+      - "Tema é superação · vontade · ambição"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  schopenhauer:
+    name: "Arthur Schopenhauer (1788-1860)"
+    school: "Filosofia da Vontade (proto-psicológica)"
+
+    conceitos_canônicos:
+      vontade: "Força cega e impessoal que move o universo · raiz do sofrimento"
+      representação: "Mundo como aparece à consciência · véu de Maya"
+      ascetismo: "Negação da vontade · única saída do sofrimento"
+      contemplação_estética: "Suspensão temporária da vontade · arte como anestesia"
+      compaixão: "Reconhecimento da identidade essencial entre seres"
+
+    pontes_para_monomito:
+      recusa_do_chamado: "Vontade buscando descanso · resistindo ao trabalho"
+      ventre_da_baleia: "Suspensão da vontade individual · entrada no impessoal"
+      apoteose: "Reconhecimento da vontade como sendo o ser do herói"
+
+    quando_citar:
+      - "Autor cita Schopenhauer (Campbell cita várias vezes)"
+      - "Tema é sofrimento como motor · vontade impessoal"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  hillman:
+    name: "James Hillman (1926-2011)"
+    school: "Psicologia Arquetípica (pós-junguiana)"
+
+    conceitos_canônicos:
+      politeísmo_psíquico: "Psique habitada por múltiplos arquétipos · não unificada"
+      alma: "Imaginação ativa · não 'eu' · não 'mente'"
+      sintoma_como_mito: "Sintoma como expressão arquetípica · não doença a curar"
+      patologização: "Tendência da alma de se expressar em forma patológica"
+      anima_mundi: "Alma do mundo · arquetípica · habitada de imagens"
+
+    pontes_para_monomito:
+      recusa_do_chamado: "Sintoma como chamado · alma falando em código patológico"
+      ventre_da_baleia: "Patologização necessária · sem cura imediata"
+      estrada_das_provas: "Imaginação ativa · diálogo com figuras internas"
+      mestre_dos_dois_mundos: "Politeísmo psíquico operante · ego habitado de múltiplas figuras"
+
+    quando_citar:
+      - "Tema é sintoma como linguagem da alma"
+      - "Foco em imaginação ativa · não interpretação"
+      - "Pós-Jung explicitamente"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  outros_quando_relevantes:
+
+    rollo_may:
+      school: "Psicologia Existencial"
+      conceitos: ["mito como necessidade psíquica", "ansiedade existencial", "criatividade"]
+      pontes: ["chamado", "encontro com sombra", "criação como manifestação do herói"]
+
+    erich_neumann:
+      school: "Junguiano · análise do mito"
+      conceitos: ["consciência heróica", "matriarcal vs patriarcal", "fases da consciência"]
+      pontes: ["toda a estrutura do monomito"]
+
+    marie_louise_von_franz:
+      school: "Junguiana · contos de fadas"
+      conceitos: ["interpretação arquetípica de contos", "feminino arquetípico"]
+      pontes: ["encontro com deusa", "mulher como tentação", "anima"]
+
+    joseph_henderson:
+      school: "Junguiano · ritos de passagem"
+      conceitos: ["iniciação", "ritos modernos", "símbolos da transformação"]
+      pontes: ["ventre da baleia", "estrada das provas"]
+
+# ───────────────────────────────────────────────────────────────────────────
+# REGRAS DE USO
+# ───────────────────────────────────────────────────────────────────────────
+
+usage_rules: |
+  1. NUNCA cite um autor psicológico que o livro extraído não cita ou parafraseia.
+     Razão: imposição de camada · trai a obra.
+
+  2. Quando o autor não cita ninguém especificamente mas usa léxico genérico,
+     use "em chave junguiana" ou "em termos da psicologia profunda" — sem
+     atribuir a nenhum autor específico.
+
+  3. Quando autor cita 2+ psicólogos, mantenha a hierarquia que o livro usa
+     (qual é interlocutor principal · quais são secundários).
+
+  4. Léxico técnico (nigredo · sombra · self) é honesto · não vira esoterismo.
+     Mantenha o termo no original (alemão · latim) com tradução.
+
+  5. Não cite Lacan / Foucault / Deleuze a menos que livro cite. São pós-anos 60
+     e raramente aparecem em obras clássicas como Campbell (1949).
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# END · psychological-bridges
+# ═══════════════════════════════════════════════════════════════════════════════
