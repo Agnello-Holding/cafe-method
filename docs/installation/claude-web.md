@@ -123,7 +123,7 @@ Conversas longas podem estourar limite de tokens. Soluções:
 
 ### Sem comandos slash de verdade
 
-Os `*joseph-*` são reconhecidos pelo prompt (não são comandos reais do Claude.ai). Funciona pq o prompt instrui o modelo a interpretá-los.
+Os `*cafe-*` são reconhecidos pelo prompt (não são comandos reais do Claude.ai). Funciona pq o prompt instrui o modelo a interpretá-los.
 
 Se Claude esquecer comandos, lembre:
 ```

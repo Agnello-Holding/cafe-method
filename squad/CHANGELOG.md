@@ -20,7 +20,7 @@
 
 1. Fidelidade à fonte (No Invention · Artigo IV)
 2. Quality gate antes de fechar (Artigo V)
-3. CLI First (Artigo I) via `*joseph-*` commands
+3. CLI First (Artigo I) via `*cafe-*` commands
 4. Agent Authority (Artigo II) · Sentinel veta · Joseph compõe
 
 ---

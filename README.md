@@ -105,7 +105,7 @@ Depois:
 |---|---|
 | [QUICKSTART.md](QUICKSTART.md) | Primeiro extract em 5 minutos (qualquer LLM) |
 | [INSTALL.md](INSTALL.md) | Instalação por contexto (AIOX · Codex · Claude · ChatGPT) |
-| [docs/commands.md](docs/commands.md) | Manual de comandos `*joseph-*` |
+| [docs/commands.md](docs/commands.md) | Manual de comandos `*cafe-*` |
 | [docs/manifesto.md](docs/manifesto.md) | Por que existe · filosofia |
 | [docs/filosofia.md](docs/filosofia.md) | Mother of Wands · sem prescrição · CVV |
 | [docs/density-trails.md](docs/density-trails.md) | Trilha Rápida · Mediada · Hermética |

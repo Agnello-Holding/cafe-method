@@ -1,6 +1,6 @@
 # Manual de Comandos · cafe-method
 
-> Todos os comandos `*joseph-*` em um lugar.
+> Todos os comandos `*cafe-*` em um lugar.
 
 ---
 

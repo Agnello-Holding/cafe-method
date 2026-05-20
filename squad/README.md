@@ -158,7 +158,7 @@ Este squad é **Constitution-compliant** e respeita os 6 artigos:
 
 | Artigo | Como o squad obedece |
 |---|---|
-| **I · CLI First** | Comandos `*joseph-*` funcionam via terminal AIOX |
+| **I · CLI First** | Comandos `*cafe-*` funcionam via terminal AIOX |
 | **II · Agent Authority** | Sentinel tem veto exclusivo · Joseph compõe exclusivo |
 | **III · Story-Driven** | Stories podem ser geradas em `docs/stories/` |
 | **IV · No Invention** | Fidelidade citacional é princípio · zero alucinação aceita |

@@ -109,7 +109,7 @@ Deve listar `cafe-method` (ou `cafe-method:*` se via AIOX).
 @joseph
 ```
 
-Esperado: greeting de Joseph com comandos `*joseph-*`.
+Esperado: greeting de Joseph com comandos `*cafe-*`.
 
 ```
 *cafe-help
